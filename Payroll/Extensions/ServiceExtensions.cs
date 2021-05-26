@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Payroll.Extensions
 {
@@ -11,6 +12,12 @@ namespace Payroll.Extensions
                     builder.AllowAnyOrigin()
                         .AllowAnyMethod()
                         .AllowAnyHeader());
+            });
+        
+        public static void ConfigureIISIntegration(this IServiceCollection services) =>
+            services.Configure<IISOptions>(options =>
+            { 
+                
             });
     }
 }
