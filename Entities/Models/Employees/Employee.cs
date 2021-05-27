@@ -22,12 +22,15 @@ namespace Entities.Models.Employees
         
         [ForeignKey(nameof(JobTitle))]
         public Guid JobTitleId { get; set; }
+        public JobTitle JobTitle { get; set; }
         
         [ForeignKey(nameof(Department))]
         public Guid DepartmentId { get; set; }
+        public Department Department { get; set; }
         
         [ForeignKey(nameof(Gender))]
         public Guid GenderId { get; set; }
+        public Gender Gender { get; set; }
         
         [Required(ErrorMessage = "Employee address is a required field.")]
         [MaxLength(30, ErrorMessage = "Maximum length for the address is 50 characters.")]
@@ -35,6 +38,7 @@ namespace Entities.Models.Employees
         
         [ForeignKey(nameof(City))]
         public Guid CityId { get; set; }
+        public City City { get; set; }
         
         [Required(ErrorMessage = "Employee email is a required field.")]
         public string Email { get; set; }
