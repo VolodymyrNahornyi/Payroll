@@ -5,7 +5,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Models\Employees" />
       <Folder Include="Models\Salaries" />
     </ItemGroup>
 
