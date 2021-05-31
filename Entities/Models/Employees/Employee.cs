@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Entities.Models.Salaries;
 
 namespace Entities.Models.Employees
 {
@@ -49,5 +50,7 @@ namespace Entities.Models.Employees
         
         public ICollection<DepartmentHistory> DepartmentHistories { get; set; }
         public ICollection<JobTitleHistory> JobTitleHistories { get; set; }
+        public ICollection<SalaryPayment> SalaryPayments { get; set; }
+        public ICollection<WorkingHoursLog> WorkingHoursLogs { get; set; }
     }
 }
