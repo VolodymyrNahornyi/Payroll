@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -11,5 +12,7 @@ namespace Entities.Models.Employees
         
         [Required(ErrorMessage = "Employee gender is a required field.")]
         public string GenderName { get; set; }
+        
+        public ICollection<Employee> Employees { get; set; }
     }
 }
